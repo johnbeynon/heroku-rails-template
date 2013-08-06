@@ -15,6 +15,7 @@ What this template does
   [Read More](https://devcenter.heroku.com/articles/rails-unicorn)
 * Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
 * Removes standard database.yml replacing it with Postgres version
+* Adds newrelic.yml (You will still need to add the addon to your application)
 
 Usage
 =====

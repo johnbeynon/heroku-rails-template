@@ -25,6 +25,9 @@ gsub_file 'Gemfile', "# gem 'unicorn'", "gem 'unicorn'"
 # Add Unicorn config
 copy_from_repo 'common/config/unicorn.rb', 'config/unicorn.rb'
 
+# Add newrelic.yml
+copy_from_repo 'common/config/newrelic.yml', 'config/newrelic.yml'
+
 # Add a Procfile
 copy_from_repo 'common/Procfile', 'Procfile'
 
