@@ -25,8 +25,14 @@ gsub_file 'Gemfile', "# gem 'unicorn'", "gem 'unicorn'"
 # Add Unicorn config
 copy_from_repo 'common/config/unicorn.rb', 'config/unicorn.rb'
 
+# Add newrelic.yml
+copy_from_repo 'common/config/newrelic.yml', 'config/newrelic.yml'
+
 # Add a Procfile
 copy_from_repo 'common/Procfile', 'Procfile'
+
+# Add a .env file for local environment variables
+copy_from_repo 'common/.env', '.env'
 
 # Remove database.yml
 remove_file 'config/database.yml'

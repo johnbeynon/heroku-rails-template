@@ -14,7 +14,9 @@ What this template does
 * Sets up Unicorn according to Heroku guidelines
   [Read More](https://devcenter.heroku.com/articles/rails-unicorn)
 * Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
+* Adds .env file for local environment variables
 * Removes standard database.yml replacing it with Postgres version
+* Adds newrelic.yml (You will still need to add the addon to your application)
 
 Usage
 =====
