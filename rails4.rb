@@ -8,7 +8,7 @@ end
 
 def copy_from_repo(filename, destination)
   repo = 'https://raw.github.com/johnbeynon/heroku-rails-template/master/files/'
-  get repo + filename, destination 
+  get repo + filename, destination
 end
 
 # Add Heroku specific Gems
@@ -24,6 +24,9 @@ gsub_file 'Gemfile', "# gem 'unicorn'", "gem 'unicorn'"
 
 # Add Unicorn config
 copy_from_repo 'common/config/unicorn.rb', 'config/unicorn.rb'
+
+# Add Rack::Timeout config
+copy_from_repo 'common/config/timeout.rb', 'config/initializers/timeout.rb'
 
 # Add newrelic.yml
 copy_from_repo 'common/config/newrelic.yml', 'config/newrelic.yml'
