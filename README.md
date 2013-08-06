@@ -29,5 +29,7 @@ What this template does
 =======================
 
 * Replaces Gemfile will Heroku specific one (includes rails_12_factor)
-* Sets up Unicorn
+* Switches sqlite to postgres
+* Sets up Unicorn according to Heroku guidelines
 * Adds Procfile
+* Removes standard database.yml replacing it with Postgres version
