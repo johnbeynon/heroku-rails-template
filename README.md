@@ -1,7 +1,20 @@
-Heroku Rails Template (WORK IN PROGRESS)
+Heroku Rails Template
 =====================
 
-A Rails template for generating Heroku compatible Rails applications out of the box!
+A Rails template for generating a skeleton Rails application that will deploy to
+Heroku with no changes and sets up the application following Heroku guidelines and best practices.
+
+At the moment it only generate Rails 4.0 applications. Rails 3.2 is coming soon.
+
+What this template does
+=======================
+
+* Adds required rails_12_factor Gem to Gemfile [Read More](https://devcenter.heroku.com/articles/rails4)
+* Switches sqlite to postgres
+* Sets up Unicorn according to Heroku guidelines
+  [Read More](https://devcenter.heroku.com/articles/rails-unicorn)
+* Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
+* Removes standard database.yml replacing it with Postgres version
 
 Usage
 =====
@@ -12,12 +25,6 @@ To generate a new Rails 4 application
 rails new myapp -m https://raw.github.com/johnbeynon/heroku-rails-template/master/rails4.rb
 ```
 
-To generate a new Rails 3.2.x application
-
-```
-rails new myapp -m https://raw.github.com/johnbeynon/heroku-rails-template/master/rails32.rb
-```
-
 Assumptions
 ===========
 
@@ -25,11 +32,3 @@ Assumptions
 * Rails is already installed (confirm via $ rails -v )
 * Postgres is installed locally
 
-What this template does
-=======================
-
-* Replaces Gemfile will Heroku specific one (includes rails_12_factor)
-* Switches sqlite to postgres
-* Sets up Unicorn according to Heroku guidelines
-* Adds Procfile
-* Removes standard database.yml replacing it with Postgres version
