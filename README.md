@@ -9,7 +9,7 @@ Usage
 To generate a new Rails 4 application
 
 ```
-rails new myapp -m https://raw.github.com/johnbeynon/heroku-rails-template/master/rails4.rb
+https://raw.github.com/johnbeynon/heroku-rails-template/master/rails4.rb
 ```
 
 To generate a new Rails 3.2.x application
