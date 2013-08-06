@@ -10,7 +10,8 @@ What this template does
 =======================
 
 * Adds required rails_12_factor Gem to Gemfile [Read More](https://devcenter.heroku.com/articles/rails4)
-* Switches sqlite to postgres
+* Switches sqlite to postgres [Read
+  More](https://devcenter.heroku.com/articles/sqlite3)
 * Sets up Unicorn according to Heroku guidelines
   [Read More](https://devcenter.heroku.com/articles/rails-unicorn)
 * Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
