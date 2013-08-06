@@ -11,9 +11,6 @@ def copy_from_repo(filename, destination)
   get repo + filename, destination 
 end
 
-# Add unicorn
-gem 'unicorn'
-
 # Add Heroku specific Gems
 gem_group :production do
   gem 'rails_12factor'
@@ -21,6 +18,9 @@ end
 
 # Switch from Sqlite3 to Postgres
 gsub_file 'Gemfile', 'sqlite3', 'pg'
+
+# Switch to Unicorn
+gsub_file 'Gemfile', "# gem 'unicorn'", "gem 'unicorn'"
 
 # Add Unicorn config
 copy_from_repo 'common/config/unicorn.rb', 'config/unicorn.rb'
@@ -31,7 +31,7 @@ copy_from_repo 'common/Procfile', 'Procfile'
 # Remove database.yml
 remove_file 'config/database.yml'
 
-# Replace with postgres friendly database.yml
+# Replace with postgres friendly database.yml for local development
 copy_from_repo 'common/config/database.yml', 'config/database.yml'
 
 # Replace development database name with one extracted from application name
