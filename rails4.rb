@@ -16,6 +16,9 @@ gem_group :production do
   gem 'rails_12factor'
 end
 
+# Add Rack timeout
+gem 'rack-timeout'
+
 # Switch from Sqlite3 to Postgres
 gsub_file 'Gemfile', 'sqlite3', 'pg'
 

@@ -9,10 +9,12 @@ At the moment it only generate Rails 4.0 applications. Rails 3.2 is coming soon.
 What this template does
 =======================
 
-* Adds required rails_12_factor Gem to Gemfile [Read More](https://devcenter.heroku.com/articles/rails4)
+* Adds required rails_12_factor to Gemfile [Read More](https://devcenter.heroku.com/articles/rails4)
+* Adds rack-timeout to Gemfile (defaults to 10 secs,  override via environment variable) [Read More](http://www.neilmiddleton.com/using-rack-timeout-with-heroku/)
 * Switches sqlite to postgres [Read
   More](https://devcenter.heroku.com/articles/sqlite3)
-* Sets up Unicorn according to Heroku guidelines
+* Sets up Unicorn according to Heroku guidelines (defaults to 3 processes with 3
+  second timeout, override via environment variable)
   [Read More](https://devcenter.heroku.com/articles/rails-unicorn)
 * Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
 * Adds .env file for local environment variables [Read
