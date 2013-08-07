@@ -15,7 +15,8 @@ Generates a new Rails application and then:
 * Adds rack-timeout to Gemfile (defaults to 10 secs,  override via environment variable) [Read More](http://www.neilmiddleton.com/using-rack-timeout-with-heroku/)
 * Switches sqlite to postgres [Read
   More](https://devcenter.heroku.com/articles/sqlite3)
-* Sets up Unicorn according to Heroku guidelines (defaults to 3 processes with 3
+* Sets up Unicorn according to Heroku guidelines (defaults to 3 processes with
+  30
   second timeout, override via environment variable)
   [Read More](https://devcenter.heroku.com/articles/rails-unicorn)
 * Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
