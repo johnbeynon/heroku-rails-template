@@ -1,5 +1,11 @@
-# Rails 4 Application Generator
-# Resultant is 100% deployable to Heroku with no further changes
+# ------------------------------------------------------------------------------
+# 
+# Heroku Rails Template Generator
+#
+# John Beynon
+# http://github.com/johnbeynon/heroku-rails-template
+#
+# -----------------------------------------------------------------------------
 
 # Helper methods
 def source_paths
@@ -11,10 +17,14 @@ def copy_from_repo(filename, destination)
   get repo + filename, destination
 end
 
-# Add Heroku specific Gems
-gem_group :production do
-  gem 'rails_12factor'
+def rails4?
+  Rails::VERSION::MAJOR.to_s == "4"
 end
+
+say 'Heroku Rails Application Generator'
+
+# Add Ruby 2.0 to Gemfile
+gsub_file 'Gemfile', /source 'https:\/\/rubygems.org'/, "source 'https://rubygems.org'\nruby '2.0.0'"
 
 # Add Rack timeout
 gem 'rack-timeout'
@@ -48,3 +58,15 @@ copy_from_repo 'common/config/database.yml', 'config/database.yml'
 
 # Replace development database name with one extracted from application name
 gsub_file "config/database.yml", /database: myapp_development/, "database: #{app_name.downcase}_development"
+
+# Now do specific actions specfic to Rails version
+case Rails::VERSION::MAJOR.to_s
+when "3"
+  # Rails 3
+  environment 'config.assets.initialize_on_precompile = false'
+when "4"
+  # Rails 4
+  gem_group :production do
+    gem 'rails_12factor'
+  end
+end
