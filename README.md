@@ -20,6 +20,8 @@ Common:
 * Adds Procfile [Read More](https://devcenter.heroku.com/articles/procfile)
 * Adds .env file for local environment variables [Read
   More](http://ddollar.github.io/foreman/#ENVIRONMENT)
+* Excludes .env from git via .gitignore
+* Adds .env_sample to communicate required ENV vars to other developers
 * Removes standard database.yml replacing it with Postgres version
 * Adds newrelic.yml (You will still need to add the addon to your application)
   [Read More](https://devcenter.heroku.com/articles/newrelic#copy-yml)

@@ -48,7 +48,13 @@ copy_from_repo 'common/config/newrelic.yml', 'config/newrelic.yml'
 copy_from_repo 'common/Procfile', 'Procfile'
 
 # Add a .env file for local environment variables
-copy_from_repo 'common/.env', '.env'
+copy_from_repo 'common/env', '.env'
+
+# Add .env_sample for sample local variables 
+copy_from_repo 'common/env_sample', '.env_sample'
+
+# Ensure local .env file is added to .gitignore
+run "echo '.env' >> .gitignore"
 
 # Remove database.yml
 remove_file 'config/database.yml'
