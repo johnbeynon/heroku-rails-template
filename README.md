@@ -49,3 +49,12 @@ Assumptions
 * Rails is already installed (confirm via $ rails -v )
 * Postgres is installed locally
 
+See Also
+========
+
+Sister project [heroku-new](https://github.com/johnbeynon/heroku-new) that adds
+to the Heroku CLI
+
+    heroku new:rails [APP_PATH]
+
+rather than having to remember to type the template URL directly.
