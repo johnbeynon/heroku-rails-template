@@ -49,6 +49,30 @@ Assumptions
 * Rails is already installed (confirm via $ rails -v )
 * Postgres is installed locally
 
+Notes
+=====
+
+If you get an error during deployment to Heroku along the lines of 
+
+```
+rake aborted! could not connect to server: Connection refused
+Is the server running on host "127.0.0.1" and accepting
+TCP/IP connections on port 5432?
+```
+
+Then you need to enable the User environment labs feature
+
+```
+heroku labs:enable user-env-compile -a myapp
+```
+
+I've found this can occur when you have certain Rails validations in your models
+which require a DB hit during the application initialization which occurs when
+assets are precompiled.
+
+Read more about this feature
+[here](https://devcenter.heroku.com/articles/labs-user-env-compile)
+
 See Also
 ========
 
