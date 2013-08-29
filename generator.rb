@@ -35,6 +35,10 @@ gsub_file 'Gemfile', 'sqlite3', 'pg'
 # Switch to Unicorn
 gsub_file 'Gemfile', "# gem 'unicorn'", "gem 'unicorn'"
 
+gem_group :production do
+  gem 'rails_12factor'
+end
+
 # Add Unicorn config
 copy_from_repo 'common/config/unicorn.rb', 'config/unicorn.rb'
 
@@ -72,7 +76,4 @@ when "3"
   environment 'config.assets.initialize_on_precompile = false'
 when "4"
   # Rails 4
-  gem_group :production do
-    gem 'rails_12factor'
-  end
 end

@@ -25,10 +25,12 @@ Common:
 * Removes standard database.yml replacing it with Postgres version
 * Adds newrelic.yml (You will still need to add the addon to your application)
   [Read More](https://devcenter.heroku.com/articles/newrelic#copy-yml)
-  
+* Add rails_12_factor to Gemfile [Read More
+* (Added 29 Aug 2013) Adds required rails_12_factor to Gemfile [Read More](https://devcenter.heroku.com/articles/rails4) following [this](https://devcenter.heroku.com/changelog-items/318) changelog entry to prevent deprecation notices in logs.
+
 Rails 4
 
-* Adds required rails_12_factor to Gemfile [Read More](https://devcenter.heroku.com/articles/rails4)
+* No specific actions any longer.
 
 Rails 3
 
