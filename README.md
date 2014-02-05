@@ -30,7 +30,9 @@ Common:
 
 Rails 4
 
-* No specific actions any longer.
+* (Added 05 Feb 2014) Adds sprockets_better_errors gem and enables it for development mode [Read
+  More](https://github.com/schneems/sprockets_better_errors) - Only for Rails
+  4.0.x.x
 
 Rails 3
 

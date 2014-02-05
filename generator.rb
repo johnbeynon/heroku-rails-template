@@ -76,4 +76,10 @@ when "3"
   environment 'config.assets.initialize_on_precompile = false'
 when "4"
   # Rails 4
+  if Rails::VERSION::MINOR < 1
+    gem 'sprockets_better_errors'
+    application(nil, env: "development") do
+      'config.assets.raise_production_errors = true'
+    end
+  end
 end
